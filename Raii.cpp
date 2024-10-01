@@ -1,23 +1,41 @@
 #include <iostream>
  
-class Person 
+class Hum
 {
-public:
-    std::string name;
-    unsigned age;
-    void print() 
+    public:
+
+    bool IsLive;
+    bool IsWalk;
+    bool IsFly;
+
+    Hum(bool L, bool W, bool F)
     {
-        std::cout << "Name: " << name << "\tAge: " << age << std::endl;
+        if(L == true && F == false && W == true )
+        {
+            IsFly = F;
+            IsWalk = W;
+            IsLive = L;
+        }
+        else
+        {
+            
+            abort;
+            
+        }
+        
     }
-    Person(std::string p_name, unsigned p_age)
-    {
-        name = p_name;
-        age = p_age;
-        std::cout << "Person has been created" << std::endl;
-    }
+    
 };
+class Iam : public Hum
+{
+    bool IsIntelectum; 
+};
+
 int main()
 {
-    Person tom("Tom", 38);  // создаем объект - вызываем конструктор
-    tom.print();
+    bool IsLiv = true;
+    bool IsWal= true;
+    bool IsFl = true;
+    Hum Man(IsLiv, IsWal, IsFl);
+
 }
