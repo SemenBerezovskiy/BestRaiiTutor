@@ -1,5 +1,15 @@
 #include <iostream>
+#include "AnimalsNPH.h"
  
+
+
+void CheckNameSpace()
+{
+    bool a = true;
+    bool b = true;
+    bool c = true;
+    Animal::Pinguin.object (a, b, c);
+}
 class Hum
 {
     public:
@@ -18,9 +28,7 @@ class Hum
         }
         else
         {
-            
-            abort;
-            
+            CheckNameSpace();
         }
         
     }
@@ -33,9 +41,22 @@ class Iam : public Hum
 
 int main()
 {
-    bool IsLiv = true;
-    bool IsWal= true;
-    bool IsFl = true;
+    bool IsLiv;
+    bool IsWal;
+    bool IsFl;
+
+
+    std::cout << "Insert a arg. to class Hum\n";
+    std::cin >> IsFl;
+
+    std::cout << "\nInsert a arg. to class Hum\n";
+    std::cin >> IsLiv;
+
+    std::cout << "\nInsert a arg. to class Hum\n";
+    std::cin >> IsWal;
+
     Hum Man(IsLiv, IsWal, IsFl);
 
+
+    
 }
